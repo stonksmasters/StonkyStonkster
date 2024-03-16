@@ -1,38 +1,43 @@
-.App {
-  text-align: center;
+/* App.css */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Montserrat:700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #5d5d5d;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #5d5d5d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    color: #a3c4f3;
+    transition: color 0.3s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a:hover {
+    color: #c6a8f5;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* App.css */
+nav {
+  background-color: #a7f0ba;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #5d5d5d;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #f4c7ab;
 }
