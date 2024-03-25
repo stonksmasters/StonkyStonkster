@@ -1,27 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import './NftProfile.css';
+import { getNftsFromSolanaWallet } from './solanaApi';
 
 const NftProfile = () => {
-    const [nftData, setNftData] = useState(null);
+    const [nfts, setNfts] = useState([]);
 
     useEffect(() => {
-        // Mock fetching NFT data
-        setNftData({
-            name: "StonkyStonkster #1",
-            image: "https://example.com/nft-image.jpg",
-            description: "My cool NFT"
-        });
+        getNftsFromSolanaWallet('Stonkystonkster.sol')
+            .then(setNfts)
+            .catch(console.error);
     }, []);
 
-    if (!nftData) {
-        return <div>Loading...</div>;
-    }
-
     return (
-        <div>
-            <h1>{nftData.name}</h1>
-            <img src={nftData.image} alt={nftData.name} />
-            <p>{nftData.description}</p>
+        <div className="nft-profile">
+            <h1>Web3 Identity: StonkyStonkster</h1>
+            <h2>Wallet: Stonkystonkster.sol</h2>
+            <div className="nft-grid">
+                {nfts.map((nft, index) => (
+                    <div key={index} className="nft-item">
+                        <img src={nft.image} alt={nft.name} />
+                        <p>{nft.name}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };

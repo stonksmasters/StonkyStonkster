@@ -41,3 +41,70 @@ nav a {
 nav a:hover {
   color: #f4c7ab;
 }
+/* App.css */
+
+/* App.css */
+
+/* General Layout */
+.nft-profile {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.nft-profile h1,
+.nft-profile h2 {
+  text-align: center;
+  color: #5a5a5a;
+}
+
+/* NFT Grid Gallery */
+.nft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.nft-item {
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.nft-item img {
+  width: 100%;
+  height: 200px; /* Fixed height or use object-fit for better control */
+  object-fit: cover; /* Ensure images cover the area without stretching */
+}
+
+.nft-item p {
+  padding: 10px;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nft-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* Interactive Elements */
+.nft-item:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Accessibility */
+.nft-item a {
+  color: #007bff;
+}
+
+.nft-item a:hover {
+  text-decoration: underline;
+}
