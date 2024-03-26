@@ -39,6 +39,7 @@ const Wallet = ({ children, showButton = true }) => {  // Add showButton prop to
         <ConnectionProvider endpoint={endpoint}>
             <WalletProvider wallets={wallets} autoConnect>
                 <WalletModalProvider>
+                <WalletMultiButton />
                     {showButton} 
                     <WalletStatusChecker />
                     {children}

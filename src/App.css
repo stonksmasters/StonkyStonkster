@@ -46,6 +46,7 @@ nav a:hover {
 /* App.css */
 
 /* General Layout */
+/* NFT Profile styles */
 .nft-profile {
   max-width: 1200px;
   margin: auto;
@@ -76,8 +77,8 @@ nav a:hover {
 
 .nft-item img {
   width: 100%;
-  height: 200px; /* Fixed height or use object-fit for better control */
-  object-fit: cover; /* Ensure images cover the area without stretching */
+  height: 200px;
+  object-fit: cover;
 }
 
 .nft-item p {
@@ -90,7 +91,7 @@ nav a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   .nft-grid {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
 
